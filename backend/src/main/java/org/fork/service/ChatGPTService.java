@@ -10,7 +10,7 @@ import java.util.Map;
 
 @Service
 public class ChatGPTService {
-    private static final String API_KEY = "sk-proj-ta1fJycYN0w1Rp6PtkEjT3BlbkFJSQ7jcy8FVyj7fGGNDfVG";
+    private static final String API_KEY = "your api key";
     private static final String API_URL = "https://api.openai.com/v1/completions";
 
     public String getChatGPTResponse(String prompt) throws Exception {

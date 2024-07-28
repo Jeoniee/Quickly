@@ -23,7 +23,7 @@ function App() {
     useEffect(() => {
         if (location) {
             const fetchWeather = async () => {
-                const apiKey = '79db1276aca996d83f7f74d7d927546c';
+                const apiKey = 'your api key';
                 const url = `https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&units=metric&appid=${apiKey}`;
                 try {
                     const response = await axios.get(url);
