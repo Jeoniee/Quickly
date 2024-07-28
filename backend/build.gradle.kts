@@ -12,8 +12,8 @@ java {
     targetCompatibility = JavaVersion.VERSION_17
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
+group = "org.fork"
+version = "0.0.1-SNAPSHOT"
 
 repositories {
     mavenCentral()
@@ -27,6 +27,9 @@ dependencies {
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
-    implementation ("org.springframework.security:spring-security-config:5.5.3")
+//    implementation("org.springframework.security:spring-security-config:5.5.3")
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.13.4.1")
 }
 
