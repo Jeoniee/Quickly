@@ -15,6 +15,10 @@ build/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+frontend/node_modules
+node_modules
+.idea
+
 
 ### Eclipse ###
 .apt_generated
