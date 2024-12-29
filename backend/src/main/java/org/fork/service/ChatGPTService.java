@@ -3,6 +3,7 @@ package org.fork.service;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.*;
 import org.fork.model.ChatGPTRequest;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -10,8 +11,10 @@ import java.util.Map;
 
 @Service
 public class ChatGPTService {
-    private static final String API_KEY = "your api key";
-    private static final String API_URL = "https://api.openai.com/v1/completions";
+    @Value("${OpenApiKey}")
+    private String API_KEY;
+    @Value("${OpenApiUrl}")
+    private String API_URL;
 
     public String getChatGPTResponse(String prompt) throws Exception {
         OkHttpClient client = new OkHttpClient();
