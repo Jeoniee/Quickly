@@ -22,7 +22,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
-    implementation("org.springframework.security:spring-security-config:5.5.3")
+//    implementation("org.springframework.security:spring-security-config:5.5.3")
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.13.4.1")

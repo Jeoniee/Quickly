@@ -23,7 +23,7 @@ function App() {
     useEffect(() => {
         if (location) {
             const fetchWeather = async () => {
-                const apiKey = 'your api key';
+                const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
                 const url = `https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&units=metric&appid=${apiKey}`;
                 try {
                     const response = await axios.get(url);
@@ -61,7 +61,7 @@ function App() {
             {location ? (
                 weather ? (
                     <div>
-                        <p>현재 위치: {location.latitude}, {location.longitude}</p>
+                        <p>현재 위치: {location.latitude}, {location.longitude}, {weather.name} </p>
                         <p>현재 날씨: {weather.main.temp}°C, {weather.weather[0].description}</p>
                         <h2>추천 메뉴: {menu}</h2>
                     </div>
