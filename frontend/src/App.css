@@ -1,0 +1,159 @@
+/* Google Fonts에서 Fredoka One 폰트를 적용 */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;500&display=swap');
+
+/* 기본적인 스타일 설정 */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f4f7fc;  /* 밝고 깔끔한 배경색 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+    font-weight: 400;
+    text-align: center;
+    color: #333;
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.letter {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+h1:hover .letter {
+    animation: jelly 0.6s ease-in-out forwards;
+}
+
+.weather-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.weather-container:hover {
+    transform: scale(1.05);
+}
+
+.weather-info {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.menu-container {
+    background-color: #f1f8ff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* 추천 메뉴 스타일 */
+.menu-container h2 {
+    font-family: 'Fredoka One', cursive;
+    font-weight: 400;
+    color: #ff6f61;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+/* 젤리 같은 효과를 위한 애니메이션 */
+.jelly-text {
+    display: inline-block;
+    font-family: 'Fredoka One', cursive;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #ff6f61;
+    margin: 0 2px;
+    transition: transform 0.3s ease;
+}
+
+.jelly-text:hover {
+    transform: scale(1.2); /* 커서가 올려지면 글자가 커짐 */
+    animation: jelly 0.6s ease-in-out;
+}
+
+@keyframes jelly {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    70% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.loading-text, .error-text {
+    font-size: 1.2rem;
+    color: #888;
+    text-align: center;
+}
+
+/* 위치 정보와 날씨 정보 표시 */
+.weather-info p {
+    margin: 8px 0;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+.menu-container p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* 버튼 스타일 */
+button {
+    padding: 12px 25px;
+    border: none;
+    background-color: #ff6f61;
+    color: white;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #d75f50;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 600px) {
+    .weather-container {
+        width: 90%;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+}
