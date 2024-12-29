@@ -23,6 +23,8 @@ public class ChatGPTService {
         String json = objectMapper.writeValueAsString(new ChatGPTRequest(prompt));
         RequestBody body = RequestBody.create(json, MediaType.parse("application/json"));
 
+        //model, content 가져오기
+
         Request request = new Request.Builder()
                 .url(API_URL)
                 .post(body)
