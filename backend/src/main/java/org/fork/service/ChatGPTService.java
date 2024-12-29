@@ -28,7 +28,7 @@ public class ChatGPTService {
 
         try (Response response = client.newCall(request).execute()) {
             if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
-            return response.body().string();
+            return response.body() == null ? null : response.body().string();
         }
     }
 
