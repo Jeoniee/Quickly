@@ -3,10 +3,12 @@ package org.fork.service;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.*;
 import org.fork.model.ChatGPTRequest;
+import org.fork.model.Message;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -20,10 +22,14 @@ public class ChatGPTService {
         OkHttpClient client = new OkHttpClient();
         ObjectMapper objectMapper = new ObjectMapper();
 
-        String json = objectMapper.writeValueAsString(new ChatGPTRequest(prompt));
-        RequestBody body = RequestBody.create(json, MediaType.parse("application/json"));
+        String model = "gpt-3.5-turbo";
+        List<Message> messages = List.of(new Message("user", prompt));
 
-        //model, content 가져오기
+        ChatGPTRequest chatGPTRequest = new ChatGPTRequest(model, messages);
+
+        // ChatGPTRequest 객체를 JSON으로 변환
+        String json = objectMapper.writeValueAsString(chatGPTRequest);
+        RequestBody body = RequestBody.create(json, MediaType.parse("application/json"));
 
         Request request = new Request.Builder()
                 .url(API_URL)
