@@ -1,5 +1,3 @@
-import org.gradle.api.JavaVersion
-
 plugins {
     id("java")
     id("war")
@@ -20,16 +18,14 @@ repositories {
 }
 
 dependencies {
+    implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.springframework.boot:spring-boot-starter")
-    implementation("javax.servlet:javax.servlet-api:4.0.1")
-    testImplementation(platform("org.junit:junit-bom:5.9.1"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
-//    implementation("org.springframework.security:spring-security-config:5.5.3")
+    implementation("org.springframework.security:spring-security-config:5.5.3")
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.13.4.1")
+    testImplementation(platform("org.junit:junit-bom:5.9.1"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
 }
-
