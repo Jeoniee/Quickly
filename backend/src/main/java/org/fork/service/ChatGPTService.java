@@ -18,6 +18,11 @@ public class ChatGPTService {
     @Value("${OpenApiUrl}")
     private String API_URL;
 
+    public String getRecommendation(Map<String, Object> location, Map<String, Object> weather) throws Exception {
+        String prompt = "Location: " + location + ", Weather: " + weather + ". Recommend a lunch menu.";
+        return this.getChatGPTResponse(prompt);
+    }
+
     public String getChatGPTResponse(String prompt) throws Exception {
         OkHttpClient client = new OkHttpClient();
         ObjectMapper objectMapper = new ObjectMapper();
@@ -41,10 +46,5 @@ public class ChatGPTService {
             if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
             return response.body() == null ? null : response.body().string();
         }
-    }
-
-    public String getRecommendation(Map<String, Object> location, Map<String, Object> weather) throws Exception {
-        String prompt = "Location: " + location + ", Weather: " + weather + ". Recommend a lunch menu.";
-        return getChatGPTResponse(prompt);
     }
 }
