@@ -1,17 +1,24 @@
 package org.fork.model;
 
+import java.util.List;
+
 public class ChatGPTRequest {
-    private String prompt;
+    private String model;
+    private List<Message> messages;
 
-    public ChatGPTRequest(String prompt) {
-        this.prompt = prompt;
+    public String getModel() {
+        return model;
     }
 
-    public String getPrompt() {
-        return prompt;
+    public void setModel(String model) {
+        this.model = model;
     }
 
-    public void setPrompt(String prompt) {
-        this.prompt = prompt;
+    public List<Message> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(List<Message> messages) {
+        this.messages = messages;
     }
 }
