@@ -1,2 +1,2 @@
-rootProject.name = "ForkAndKnife"
-
+rootProject.name = "Quickly"
+include("backend")
