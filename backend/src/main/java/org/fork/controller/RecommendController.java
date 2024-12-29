@@ -1,6 +1,7 @@
 package org.fork.controller;
 
 import org.fork.service.ChatGPTService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -9,6 +10,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api")
 public class RecommendController {
+    @Autowired()
     private ChatGPTService chatGPTService;
 
     @PostMapping("/recommend")
