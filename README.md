@@ -47,13 +47,13 @@ How to Start the Project
 
 ---
 
-**Back end Start**
+**BE Start** 
 
 ```powershell
 ./gradlew bootRun
 ```
 
-**Front end Start**
+**FE Start**
 
 ```jsx
 npm start
