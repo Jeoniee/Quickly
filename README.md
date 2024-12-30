@@ -1,6 +1,6 @@
 Quickly 는 사용자의 위치와 현재 날씨 정보를 제공 받아 OpenAi API 를 활용해 오늘 점심 메뉴를 추천해주는 사이트 입니다!
 
-처음 프로그래밍을 접했을 때 만들었던 프로젝트를 새로운 언어와, ai를 연동하여 재구성 했습니다.😎
+처음 프로그래밍을 접했을 때 만들었던 프로젝트를 새로운 언어와, ai를 연동하여 미니 프로젝트로 재구성 했습니다.😎
 
 ### ✔️ P**roject Structure**
 
@@ -12,29 +12,35 @@ Quickly-app/
 │   ├── src/
 │   │   ├── main/
 │   │   │   ├── java/
-│   │   │   │   ├── com/
-│   │   │   │   │   ├── example/
-│   │   │   │   │   │   ├── MyLunchRecommendationAppApplication.java
+│   │   │   │   ├── org/
+│   │   │   │   │   ├── fork/
+│   │   │   │   │   │   ├── config/
 │   │   │   │   │   │   ├── controller/
-│   │   │   │   │   │   │   ├── RecommendationController.java
+│   │   │   │   │   │   ├── model/
 │   │   │   │   │   │   ├── service/
 │   │   │   │   │   │   │   ├── ChatGPTService.java
-│   │   │   │   │   │   ├── model/
-│   │   │   │   │   │   │   ├── ChatGPTRequest.java
-│   │   ├── resources/
-│   │   │   ├── application.properties
-│   ├── build.gradle
-│   ├── settings.gradle
+│   │   │   │   │   │   │   └── ForkAndKnifeRunApplication.java
+│   │   │   ├── resources/
+│   │   │   │   ├── application.properties
+│   │   │   │   └── application-secrets.properties
+│   ├── build.gradle.kts
 ├── frontend/
+│   ├── build/
+│   ├── node_modules/
 │   ├── public/
-│   │   ├── index.html
 │   ├── src/
+│   │   ├── App.css
 │   │   ├── App.js
-│   │   ├── index.js
+│   │   └── index.js
 │   ├── package.json
+│   └── package-lock.json
+├── gradle/
+├── .env
+├── .gitignore
 ├── gradlew
 ├── gradlew.bat
 ├── README.md
+└── settings.gradle.kts
 ```
 
 How to Start the Project 
