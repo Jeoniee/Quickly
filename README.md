@@ -74,5 +74,3 @@ https://platform.openai.com/playground/chat?models=gpt-3.5-turbo
 **GeoLocation Api**
 
 https://developers.google.com/maps/documentation/geolocation/overview?hl=ko
-
-크롬으로 할 예정..
